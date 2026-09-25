@@ -15,3 +15,18 @@ total_cash = M - total # 남은 돈
 
 print(total)
 print(total_cash)
+
+# 교수님식 코드 
+# 가지고 있는 돈, 간식 가격, 구매 개수 입력 
+M, P, N = map(int, input().split())
+
+print(P*N)
+print(M-(P*N))
+
+# 총 구매 금액과 남은 돈 계산
+# total_price = P*N
+# remaining_money = M - total_price 
+
+# 결과 출력 
+# print(total_price)
+# print(remaining_money)
