@@ -6,3 +6,10 @@ name = input()
 favorite_food = input()
 print("이름:", name)
 print("좋아하는 음식:", favorite_food)
+
+# 교수님식 코드 
+name = input()
+favorite_food = input()
+# : 뒤에 공백을 한칸을 넣어라 
+print('이름:', name)
+print('좋아하는 음식:', favorite_food)
