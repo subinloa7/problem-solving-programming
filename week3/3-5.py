@@ -8,5 +8,18 @@
 N = int(input())
 for i in range(1, N+1):
   print(" " * (N - i) + "*" * (2 * i - 1))
-for i in range(4, 0, -1):
+for i in range(N-1, 0, -1):
   print(" " * (N - i) + "*" * (2 * i - 1))
+
+# 교수님식 코드 
+N = int(input())
+# 위쪽 : 별의 개수가 증가함
+for i in range(1, N+1):
+  spaces = N - i
+  stars = 2 * i - 1
+  print(" " * spaces + "*" * stars)
+# 아래쪽 : 별의 개수가 감소함
+for i in range(N-1, 0, -1):
+  spaces = N - i
+  stars = 2 * i - 1
+  print(" " * spaces + "*" * stars)
