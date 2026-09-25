@@ -5,3 +5,7 @@
 # 문장 = 안녕하세요 여기는 환상의 나라 에버랜드 입니다.
 문장 = input()
 print(문장)
+
+# 교수님식 코드 
+input_text = input() # 문자열 저장 -> input_text
+print(input_text) # print() -> input_text 출력 
