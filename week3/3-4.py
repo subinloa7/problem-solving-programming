@@ -5,3 +5,11 @@
 N = int(input())
 for i in range(N):
   print("*" * (i + 1))
+
+# 교수님식 코드 
+# 출력할 줄 수 입력 
+N = int(input()) # N = 5
+
+# 1부터 N까지 반복
+for i in range(1, N+1):
+  print("*" * i)
