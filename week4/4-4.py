@@ -42,3 +42,15 @@ if N >= 1000:
     print(천의자리)
 if N >= 10000:
     print(만의자리)
+
+# 교수님식 코드
+N = int(input())
+
+# 입력이 0인 경우
+if N == 0:
+    print(0)
+
+# 일의 자리부터 출력
+while N > 0:
+    print(N % 10)
+    N = N // 10
