@@ -12,3 +12,13 @@ N = int(input())
 만의자리 = N // 10000
 
 print(일의자리 + 십의자리 + 백의자리 + 천의자리 + 만의자리)
+
+# 교수님식 코드
+N = int(input())
+total = 0
+
+while N > 0:
+    total += N % 10   # 일의 자리 숫자를 합계에 더함
+    N = N // 10      # 일의 자리 제거
+
+print(total)
