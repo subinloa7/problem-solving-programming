@@ -13,3 +13,15 @@ N = int(input())
 만의자리 = N // 10000
 
 print((일의자리*1)+(십의자리*2)+(백의자리*3)+(천의자리*4)+(만의자리*5))
+
+# 교수님식 코드
+N = int(input())
+weight = 1
+total = 0
+
+while N > 0:
+    total += (N % 10) * weight  # 일의 자리 숫자에 가중치를 곱해 합산
+    N = N // 10                # 일의 자리 제거
+    weight += 1                # 다음 자리의 가중치 증가
+
+print(total)
