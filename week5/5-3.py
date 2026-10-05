@@ -16,3 +16,17 @@ for i in range(1, N+1):
 
 print(count)
 print(total)
+
+# 교수님식 코드 
+N = int(input("정수 입력: "))
+
+count = 0 
+sum = 0
+
+for i in range(1, N+1):
+  if i % 3 == 0 and i % 2 == 0:
+    count += 1
+    sum += i
+
+print(count))
+print(sum)
