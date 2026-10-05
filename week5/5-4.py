@@ -18,3 +18,31 @@ for i in range(N):
         else:
             print(" ", end="")
     print()
+
+# 교수님식 코드 
+N = int(input())
+
+if N % 2 == 0:
+    print("홀수를 입력하세요.")
+else:    
+    for row in range(N):
+        for col in range(N):
+            char = " "
+
+            # 정사각형의 테두리
+            if row == 0 or row == N - 1 or col == 0 or col == N - 1:
+                char = "*"
+
+            # 왼쪽 위 → 오른쪽 아래 대각선
+            if row == col:
+                char = "*"
+
+            # 오른쪽 위 → 왼쪽 아래 대각선
+            if row + col == n - 1:
+                char = "*"
+
+            # 각 위치에서 한 번만 출력
+            print(char, end="")
+
+        # 한 행의 출력이 끝나면 줄바꿈
+        print()
