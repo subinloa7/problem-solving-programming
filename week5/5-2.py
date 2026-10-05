@@ -17,3 +17,16 @@ elif X < 0 and Y < 0:
   print("제 3사분면에 있습니다.")
 else:
   print("제 4사분면에 있습니다.")
+
+# 교수님식 코드 
+X = int(input("X 좌표 :"))
+Y = int(input("Y 좌표 :"))
+
+if X > 0 and Y > 0:
+  print("제 1사분면에 있습니다.")
+elif X < 0 and Y > 0:
+  print("제 2사분면에 있습니다.")
+elif X < 0 and Y < 0:
+  print("제 3사분면에 있습니다.")
+elif X > 0 and Y < 0:
+  print("제 4사분면에 있습니다.")
