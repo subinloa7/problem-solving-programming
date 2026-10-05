@@ -8,3 +8,26 @@
 # (4) 다이아몬드 내부에는 +를 출력함 
 # (5) 다이아몬드 외부에는 공백을 출력함 
 # (6) 각 위치가 테두리인지 -> 내부인지 -> 외부인지 조건문을 이용하여 판단함
+
+N = int(input())
+
+# 교수님식 코드
+N = int(input())
+
+center = N // 2
+
+for i in range(N):
+    for j in range(N):
+        distance = abs(i - center) + abs(j - center)
+
+        if distance == center:
+            # 다이아몬드 테두리
+            print("*", end="")
+        elif distance < center:
+            # 다이아몬드 내부
+            print("+", end="")
+        else:
+            # 다이아몬드 외부
+            print(" ", end="")
+
+    print()
