@@ -7,6 +7,14 @@ A, B, P = input().split() # 연산 기호 = P
 A = int(A)
 B = int(B)
 
+# 출력 예시로 
+# 15 7 
+# //
+# 이렇게 되어있기 때문에 
+
+A, B = map(int, input().split())
+P = input()
+
 match P:
   case "+":
     print(A+B)
