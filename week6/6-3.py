@@ -43,12 +43,14 @@ for i in range(M):
         else:
           Y += 1
           success += 1
+            
       case "D":
         if Y == 0:
           fail += 1
         else:
           Y -= 1
           success += 1
+            
       case "H":
         X = 0
         Y = 0
