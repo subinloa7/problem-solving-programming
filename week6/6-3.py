@@ -12,3 +12,50 @@
 # 정의되지 않은 명령은 위치를 변경하지 않고 실패 횟수를 1 증가시킴
 # R, L, U, D로 실제 한 칸 이동했을 때만 성공 횟수를 1 증가시킴
 
+N, M = map(int, input().split())
+
+X = 0
+Y = 0
+fail = 0
+success = 0 
+
+for i in range(M):
+    명령 = input()
+  
+    match 명령:
+      case "R":
+        if X == N:
+          fail += 1
+        else:
+          X += 1
+          success += 1
+          
+      case "L":
+        if X == 0:
+          fail += 1
+        else:
+          X -= 1
+          success += 1
+          
+      case "U":
+        if Y == N:
+          fail += 1
+        else:
+          Y += 1
+          success += 1
+      case "D":
+        if Y == 0:
+          fail += 1
+        else:
+          Y -= 1
+          success += 1
+      case "H":
+        X = 0
+        Y = 0
+
+      case _:
+        fail += 1
+
+print(X, Y)
+print(success)
+print(fail)
