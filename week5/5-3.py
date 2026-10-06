@@ -28,5 +28,5 @@ for i in range(1, N+1):
     count += 1
     sum += i
 
-print(count))
+print(count)
 print(sum)
