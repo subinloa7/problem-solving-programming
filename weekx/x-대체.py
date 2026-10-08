@@ -8,7 +8,46 @@
 # 입력 : (1) 한 줄에 정수 A, B, S가 공백으로 구분되어 주어짐 (2) 100 <= A <= B <= 999 (3) 0 <= S <= 27
 # 출력 : (1) 첫 번째 줄에 조건을 모두 만족하는 비밀번호의 개수를 출력함
 # (2) 두 번째 줄에 선택한 비밀번호를 출력함 (3) 가능한 비밀번호가 없으면 두 번째 줄에 0을 출력함
-# 출력 예시 : 100 200 8 (다음 줄) 3 (다음 줄) 125
+# 출력 예시 : 100 200 8 (다음 줄) 3 (다음 줄) 107
 # 구현 조건 : (1) 문자열 변환, 리스트, 정렬 함수, min(), max(), abs()를 사용할 수 없음
 # (2) 자릿수 분해는 //, %를 사용함 (3) 차이의 절댓값은 if를 이용하여 직접 계산함
 # (4) 조건문은 if만 사용함. elif, else는 사용하지 않음
+
+A, B, S = map(int, input().split())
+
+count = 0
+
+for i in range(A, B + 1):
+    a = i % 10
+    b = (i // 10) % 10
+    c = i // 100
+
+    if a != b and b != c and c != a:
+        if a + b + c == S:
+            difference = c - a
+
+            if difference < 0:
+                difference = difference * (-1)
+
+            if difference % 2 == 0:
+                count += 1
+
+                if count == 1:
+                    best_number = i
+                    best_difference = difference
+
+                if difference > best_difference:
+                    best_number = i
+                    best_difference = difference
+
+                if difference == best_difference and i < best_number:
+                    best_number = i
+                    best_difference = difference
+
+print(count)
+
+if count == 0:
+    print(0)
+
+if count > 0:
+    print(best_number)
