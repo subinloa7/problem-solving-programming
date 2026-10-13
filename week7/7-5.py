@@ -68,5 +68,4 @@ end_day = best_start + best_length
 print(best_length)
 print(start_day, end_day)
 
-# 나의 코드는 시작 위치가 1일부터 시작하는 날짜, 반복문 안에서 날짜 계산
-# 교수님식 코드는 시작 위치가 0부터 시작하는 리스트 인덱스, 마지막에 날짜로 변환 (인덱스와 날짜의 차이를 알아야 함)
+
