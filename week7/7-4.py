@@ -13,9 +13,13 @@ data = list(map(int, input().split()))
 
 total = 0
 result = []
+# prefix_sums = []
 
 for i in range(N):
     total = total + data[i]
+  # total += data[i]
     result.append(total)
+  # prefix_sums.append(total)
 
 print(*result)
+# print(*prefix_sums)
