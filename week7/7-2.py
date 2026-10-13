@@ -9,7 +9,7 @@
 
 data = list(map(int, input().split()))
 K, X = map(int, input().split())
-data[K-1]=X
+data[K - 1] = X
 print(*data)
 
 # for i in range(5):
