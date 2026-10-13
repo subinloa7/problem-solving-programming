@@ -17,21 +17,56 @@
 N = int(input())
 data = list(map(int, input().split())) # N일 동안의 매출 리스트
 
-high_line = 1 # 상승 구간
-max_high_line = 1 # 가장 긴 상승 구간
+high_length = 1 # 상승 구간
+max_high_length = 1 # 가장 긴 상승 구간
 start_date = 1 # 시작 날짜
 max_start_date = 1 # 가장 긴 구간의 시작 날짜
 
 for i in range(1, N):
-  if data[i] > data[i-1]:
-    high_line += 1
-  else:
-    high_line = 1
-    start_date = i + 1
-    
-  if high_line > max_high_line:
-        max_high_line = high_line
+    if data[i] > data[i-1]:
+        high_length += 1
+    else:
+        high_length = 1
+        start_date = i + 1
+
+    if high_length > max_high_length:
+        max_high_length = high_length
         max_start_date = start_date
-    
-print(max_high_line)
-print(max_start_date, max_start_date + max_high_line - 1)
+
+print(max_high_length)
+print(max_start_date, max_start_date + max_high_length - 1)
+
+# 교수님식 코드
+N = int(input())
+sales = list(map(int, input().split())) # N일 동안의 매출 리스트
+
+# 현재 상승 구간
+current_start = 0
+current_length = 1
+
+# 가장 긴 상승 구간 
+best_start = 0 
+best_length = 1
+
+for i in range(1, N):
+  if sales[i] > sales[i - 1]:
+    current_length += 1
+  else:
+    # 상승이 끊어지면 현재 날짜부터 새 구간 시작 
+    current_start = i
+    current_length = 1
+
+  # 더 긴 구간일 때만 갱신하여 동점이면 앞선 구간 유지
+  if current_length > best_length:
+    best_start = current_start
+    best_length = current_length
+
+# 인덱스를 1부터 시작하는 날짜로 변환
+start_day = best_start + 1
+end_day = best_start + best_length
+
+print(best_length)
+print(start_day, end_day)
+
+# 나의 코드는 시작 위치가 1일부터 시작하는 날짜, 반복문 안에서 날짜 계산
+# 교수님식 코드는 시작 위치가 0부터 시작하는 리스트 인덱스, 마지막에 날짜로 변환 (인덱스와 날짜의 차이를 알아야 함)
