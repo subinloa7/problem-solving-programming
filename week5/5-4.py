@@ -38,7 +38,7 @@ else:
                 char = "*"
 
             # 오른쪽 위 → 왼쪽 아래 대각선
-            if row + col == n - 1:
+            if row + col == N - 1:
                 char = "*"
 
             # 각 위치에서 한 번만 출력
