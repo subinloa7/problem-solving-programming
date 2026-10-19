@@ -16,7 +16,7 @@ for i in range(N, 0, -1):
 N = int(input()) # N = 4
 # 위쪽 날개 : 양쪽 별이 늘어나고 가운데 공백이 줄어듦
 for i in range(1, N+1):
-    stars = "*" ** i
+    stars = "*" * i
     spaces = " " * (2 * (N-i))
     print(stars + spaces + stars)
 # 아래쪽 날개 : 양쪽 별이 줄어들고 가운데 공백이 늘어남
