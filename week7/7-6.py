@@ -11,11 +11,30 @@
 # 3 5
 # 70
 
-N , K = map(int, input().split())
-data = list(map(int, input().split()))
+n, k = map(int, input().split())
+sales = list(map(int, input().split()))
 
-count = 
-high_count = 
+# n = 7, k = 3
+# sales = [10 20 15 30 25 10 20]
 
-for i in range(N):
-  
+# 시작일 / 합계 --> best
+best_start = 0
+best_sum = -1
+
+for i in range(n - k + 1):
+    # 현재 구간에서 가장 높은 값이 나오나?
+
+    current = sales[i:i+k]  # i ~ i+k 구간이 잘린다
+    total = 0
+    for item in current: 
+        total += item
+
+    if total > best_sum:
+        best_sum = total
+        best_start = i
+
+# 시작 날짜와 마지막 날짜 출력(시작 날짜는 1부터 시작)
+print(best_start + 1, best_start + k)
+
+# 매출 합
+print(best_sum)
