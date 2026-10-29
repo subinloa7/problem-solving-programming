@@ -6,5 +6,26 @@
 # < 18.5 : 저체중, 18.5 ~ 22.9 : 정상, 23 ~ 24.9 : 과체중, 25 ~ 29.9 : 경도비만, 30 이상 : 고도 비만
 # 출력 : 각 BMI 구간에 맞춰 저체중, 정상, 과체중, 경도비만, 고도비만을 출력
 
-def calculate_bmi(W, H):
-  return 
+def calculate_bmi(H, W):
+    height = H / 100
+    bmi = W / (height * height)
+    return bmi
+
+def check_bmi(bmi):
+    if bmi < 18.5:
+        return "저체중"
+    elif bmi < 23:
+        return "정상"
+    elif bmi < 25:
+        return "과체중"
+    elif bmi < 30:
+        return "경도비만"
+    else:
+        return "고도비만"
+
+H, W = map(int, input().split())
+
+bmi = calculate_bmi(H, W)
+result = check_bmi(bmi)
+
+print(result)
