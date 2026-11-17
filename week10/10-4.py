@@ -10,6 +10,10 @@
 # ex) PYTHON.DEV.PDF.XLSX -> xlsx
 
 name = input()
-parts = name.split(".")
+result = name.split(".")
+print(result[-1].lower())
 
+# 교수님식 코드 
+filename = input()
+parts = filename.split('.')
 print(parts[-1].lower())
