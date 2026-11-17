@@ -6,3 +6,17 @@
 # 출력 : 앞뒤 공백을 제거하고 영문을 소문자로 변환한 결과를 출력함.
 # 예제 입력 : Hello Python
 # 예제 출력 : hello python
+
+name = input()
+
+result = name.strip().lower()
+
+print(result)
+
+# strip().lower() 함수를 연결해서 사용하지 않을 때 
+name = input()
+
+reult = name.strip()
+result = result.lower()
+
+print(result)
