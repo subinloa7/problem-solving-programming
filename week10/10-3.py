@@ -7,3 +7,14 @@
 # 출력 : 각 문자 사이에 하이픈을 넣은 결과를 출력함. 첫 문자 앞과 마지막 문자 뒤에는 하이픈을 넣지 않음.
 # 예제 입력 : PYTHON
 # 예제 출력 : P-Y-T-H-O-N
+
+def add_separator(text):
+    result = text[0]
+
+    for char in text[1:]:
+        result += "-" + char
+
+    return result
+
+text = input()
+print(add_separator(text))
