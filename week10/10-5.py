@@ -9,3 +9,28 @@
 # 출력 : 각 단어의 첫 글자를 대문자로 연결하여 출력함.
 # ex) artificial intelligence -> AI
 # ex) Problem solving -> PS
+
+def make_abbreviation(text):
+    words = text.split()
+    result = ""
+
+    for word in words:
+        A = word[0].upper()
+        result += A
+
+    return result
+
+text = input()
+print(make_abbreviation(text))
+
+# 교수님식 코드
+def make_abbreviation(text):
+  # text를 split한다. (공백을 기준으로)
+  data = ''
+  for word in text.split():
+    data += word[0].upper()
+
+  return data
+
+text = input().strip() # 무언가 입력됨.
+print(make_abbreviation(text))
