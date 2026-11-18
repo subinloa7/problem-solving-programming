@@ -11,3 +11,13 @@
 # 1200 0 3500 2000
 # 예제 출력 :
 # 2400 0 7000 4000
+
+N = int(input())
+steps = list(map(int, input().split()))
+new_steps = []
+
+for value in steps:
+  value = value * 2
+  new_steps.append(value)
+
+print(*new_steps)
