@@ -15,3 +15,21 @@
 # 예제 출력 :
 # 1 3 5
 # 12
+
+N, K = map(int, input().split())
+box = list(map(int, input().split())) # N개의 재고 수량
+
+shortage = [] # 재고가 부족한 상품 번호를 담는 리스트
+total = 0 # 부족한 수량을 모두 더하는 변수 
+
+for i in range(N):
+    if box[i] < K:
+        shortage.append(i + 1)
+        total += K - box[i]
+
+if len(shortage) == 0:
+    print("NONE")
+else:
+    print(*shortage)
+
+print(total)
