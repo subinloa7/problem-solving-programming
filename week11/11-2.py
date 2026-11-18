@@ -15,3 +15,9 @@
 # 2 준호 
 # 3 민지 
 # 4 서연 
+
+N = int(input())
+names = input().split()
+
+for i in range(len(names)):
+  print(i+1, names[i])
