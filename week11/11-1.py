@@ -21,3 +21,17 @@ for value in steps:
   new_steps.append(value)
 
 print(*new_steps)
+
+# 교수님식 코드 
+N = int(input()) 
+count = list(map(int, input().split()))
+
+# print(N)
+# print(count)
+
+new_count = []
+
+for c in count:
+    new_count.append(c * 2)
+    
+print(*new_count)
