@@ -21,3 +21,14 @@ names = input().split()
 
 for i in range(len(names)):
   print(i+1, names[i])
+
+# 교수님식 코드
+N = int(input())
+students = list(input().split())
+
+# print(N)
+# print(students)
+
+#순회하며 번호 + 이름 출력
+for i in range(N):
+    print(i+1, students[i])
