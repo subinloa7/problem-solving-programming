@@ -33,3 +33,21 @@ else:
     print(*shortage)
 
 print(total)
+
+# 교수님식 코드
+N, K = map(int, input().split())
+items = list(map(int, input().split()))
+# print(items)
+indices = []
+count = 0
+for i in range(N):
+    if items[i] < K:
+        indices.append(i+1)
+        count += (K-items[i])
+    
+if len(indices) == 0:
+   print("NONE")
+   print("0")
+else:
+    print(*indices)
+    print(count)
