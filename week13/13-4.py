@@ -22,3 +22,18 @@
 # 3 1 4 3 2
 # 예제 출력 : 
 # 32
+
+N = int(input())
+times = list(map(int, input().split())) # 작업 시간
+
+times.sort()
+
+elapsed_time = 0 # 지금 학생의 완료 시간 
+total_completion_time = 0 # 지금까지 모든 학생의 완료 시간을 더한 값
+
+for work_time in times:
+  elapsed_time += work_time
+  total_completion_time += elapsed_time 
+
+print(total_completion_time)
+  
