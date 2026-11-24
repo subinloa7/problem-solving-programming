@@ -36,4 +36,3 @@ for work_time in times:
   total_completion_time += elapsed_time 
 
 print(total_completion_time)
-  
