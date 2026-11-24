@@ -8,3 +8,30 @@
 # 입출력 예제 :
 # 예제 입력 : 1260
 # 예제 출력 : 6
+
+N = int(input())
+count = 0 
+
+count += N // 500
+N %= 500
+
+count += N // 100
+N %= 100
+
+count += N // 50
+N %= 50
+
+count += N // 10
+N %= 10
+
+print(count)
+
+# 교수님식 코드 
+N = int(input())
+count = 0 
+
+for coin in [500, 100, 50, 10]:
+  count += N // coin
+  N %= coin
+
+print(count)
