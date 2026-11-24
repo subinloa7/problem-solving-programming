@@ -17,3 +17,21 @@
 # 예제 출력 :
 # 3
 # 9000
+
+N, B = map(int, input().split())
+prices = list(map(int, input().split()))
+
+prices.sort()
+
+count = 0 # 구매한 상품 개수 
+total = 0 # 총 지출 금액
+
+for price in prices:
+    if total + price > B:
+        break
+
+    total += price
+    count += 1
+
+print(count)
+print(total)
