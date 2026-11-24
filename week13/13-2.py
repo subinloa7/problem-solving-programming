@@ -10,3 +10,29 @@
 # 입출력 예제 : 
 # 예제 입력 : 23
 # 예제 출력 : 5
+
+N = int(input())
+need_box_total = 0
+
+need_box_total += N // 8
+N %= 8 
+
+need_box_total += N // 4
+N %= 4
+
+need_box_total += N // 2
+N %= 2
+
+need_box_total += N // 1
+
+print(need_box_total)
+
+# 교수님식 코드 
+N = int(input())
+count = 0 
+
+for box in [8, 4, 2, 1]:
+  count += N // box
+  N %= box
+
+print(count)
