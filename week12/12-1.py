@@ -12,3 +12,12 @@
 # 5 3 4 1 2
 # 예제 출력 :
 # 3 4 1 2 5
+
+N = int(input())
+numbers = list(map(int, input().split()))
+
+for i in range(N - 1):
+  if numbers[i] > numbers[i + 1]:
+    numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+
+print(*numbers)
