@@ -13,3 +13,18 @@
 # 75 90 60 90 85 100
 # 예제 출력 :
 # 100 90 90 85 75 60
+
+N = int(input())
+scores = list(map(int, input().split()))
+
+for i in range(len(scores)-1):
+  max_index = i
+  
+  for j in range(i+1, len(scores)):
+    if scores[j] > scores[max_index]:
+      max_index = j
+
+  if max_index != i:
+    scores[i], scores[max_index] = scores[max_index], scores[i]
+
+print(*scores)
