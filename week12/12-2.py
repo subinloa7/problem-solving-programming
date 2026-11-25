@@ -16,3 +16,24 @@
 # 예제 출력 :
 # 1 2 3 4 5
 # 2
+
+N = int(input())
+numbers = list(map(int, input().split()))
+
+count = 0  # 실행한 바퀴 수
+
+while count < N - 1:
+    swapped = False  # 이번 바퀴에서 교환했는지
+
+    for i in range(N - 1 - count):
+        if numbers[i] > numbers[i + 1]:
+            numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+            swapped = True
+
+    count += 1
+
+    if not swapped:
+        break
+
+print(*numbers)
+print(count)
