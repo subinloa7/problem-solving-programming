@@ -23,5 +23,24 @@
 # 2 60 
 
 N = int(input())
-score = list(map(int, input().split()))
-average = 0
+scores = list(map(int, input().split()))
+total = 0 
+
+for score in scores:
+  total += score
+
+average = total / N
+
+smallest_diff = 101
+student_num = 0 
+selected_score = 0
+
+for i in range(N):
+  diff = abs(scores[i] - average)
+  
+  if diff < smallest_diff:
+    smallest_diff = diff
+    student_num = i+1
+    selected_score = scores[i]
+
+print(student_num, selected_score)
