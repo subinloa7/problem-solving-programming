@@ -16,7 +16,7 @@ print(result)
 # strip().lower() 함수를 연결해서 사용하지 않을 때 
 name = input()
 
-reult = name.strip()
+result = name.strip()
 result = result.lower()
 
 print(result)
