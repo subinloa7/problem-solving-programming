@@ -22,3 +22,37 @@
 # 예제 출력 :
 # 4
 # 20 
+
+N, T = map(int, input().split())
+study_times = list(map(int, input().split()))
+
+study_times.sort()
+count = 0 
+
+for i in range(N):
+  if study_times[i] <= T:
+    T -= study_times[i]
+    count += 1
+    
+  else:
+    break
+
+print(count)
+print(T)
+
+# 교수님식 코드
+N, T = map(int, input().split())
+times = list(map(int, input().split()))
+
+times.sort()
+count = 0
+
+for work_time in times:
+  if work_time > T:
+    break
+
+  T -= work_time
+  count += 1
+
+print(count)
+print(T)
