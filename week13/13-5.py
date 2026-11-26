@@ -8,3 +8,30 @@
 # 입출력 예제 :
 # 예제 입력 : 25
 # 예제 출력 : 6
+
+N = int(input())
+count = 0
+
+while N > 1:
+    if N % 2 == 0:
+        N //= 2
+        count += 1
+    else:
+        N -= 1
+        count += 1
+
+print(count)
+
+# 교수님식 코드 
+N = int(input())
+count = 0
+
+while N > 1:
+    if N % 2 == 0:
+        N //= 2
+    else:
+        N -= 1
+
+    count += 1
+
+print(count)
