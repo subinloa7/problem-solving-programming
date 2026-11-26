@@ -12,3 +12,14 @@
 # 10 40 20 50 30 5
 # 예제 출력 : 
 # 120 
+
+N, K = map(int, input().split())
+numbers = list(map(int, input().split()))
+
+numbers.sort(reverse = True)
+total = 0
+
+for i in range(K):
+  total += numbers[i]
+
+print(total)
